@@ -4,7 +4,6 @@ import { NextRequest,NextResponse} from 'next/server'
 import bcryptjs from 'bcryptjs'
 import { sendEmail } from '@/helpers/mailer'
 
-
 connect()
 
 export async function POST(request:NextRequest){
@@ -37,7 +36,6 @@ export async function POST(request:NextRequest){
             success:true,
             savedUser
         })
-
 
     } catch (error:any) {
         return NextResponse.json({error: error.message},{status:500})        
